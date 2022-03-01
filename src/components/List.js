@@ -25,7 +25,7 @@ export default function List() {
           style={styles.list}
           data={countries}
           renderItem={(data) => <CountryCard country={data.item} />}
-          keyExtractor={(data, index) => index.toString()}
+          keyExtractor={(item, index) => index.toString()}
           ItemSeparatorComponent={() => <View style={styles.border}></View>}
         />
       )}

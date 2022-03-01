@@ -2,7 +2,7 @@ import { StyleSheet, View, Text, Image } from "react-native";
 
 export default function CountryCard(props) {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.baseText}>
         <Text style={styles.innerText}>Pays : </Text>
         {props.country.name.common}
@@ -18,21 +18,23 @@ export default function CountryCard(props) {
         </Text>
       )}
       {props.country.flags.png ? (
-        <Image uri={props.country.flags.png} style={styles.img} />
+        <Image source={{ uri: props.country.flags.png }} style={styles.img} />
       ) : (
-        <Text>No flag</Text>
+        <Text style={{ fontWeight: "bold" }}>No flag</Text>
       )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  baseText: { fontSize: 18 },
+  container: { alignItems: "center" },
+  baseText: { fontSize: 18, margin: 5 },
   innerText: {
     fontWeight: "bold",
   },
   img: {
     width: 200,
-    height: "auto",
+    height: 130,
+    margin: 15,
   },
 });
