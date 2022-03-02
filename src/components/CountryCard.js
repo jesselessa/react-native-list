@@ -78,6 +78,12 @@ export default function CountryCard(props) {
               {props.country.capital}
             </Text>
           ) : null}
+          {/* {props.country.capital ? (
+            <Text style={styles.baseText}>
+              <Text style={styles.innerText}>Capitale : </Text>
+              {props.country.capital}
+            </Text>
+          ) : null} */}
           {/* Weather */}
           <Text style={styles.baseText}>
             <Text style={styles.innerText}>Température : </Text>
