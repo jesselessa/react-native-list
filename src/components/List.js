@@ -11,8 +11,8 @@ export default function List() {
       .then((response) => response.json())
       .then((response) => {
         setCountries(response);
-        console.log(response);
-        setLoading((prev) => !prev);
+        // console.log(response);
+        setLoading((prevState) => !prevState);
       });
   }, []);
 
