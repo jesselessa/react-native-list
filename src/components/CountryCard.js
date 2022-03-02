@@ -47,8 +47,9 @@ export default function CountryCard(props) {
         console.log(response);
         setCapitalData((prevState) => !prevState);
         // setLoading((prevState) => !prevState);
-      })
-      .catch(`Error - ${error}`);
+      });
+    // .catch(`Error - ${error}`);
+    // Don't know why but problem when adding catch() method
   };
 
   return (
